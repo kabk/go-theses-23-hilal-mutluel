@@ -4,35 +4,46 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "NeueHaasDisplay-Roman";
   src: url("fonts/NeueHaasDisplay-Roman.woff") format("woff"), url("fonts/NeueHaasDisplay-Roman.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Iridium LT W02 Italic";
   src: url("fonts/Iridium LT W02 Italic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "NeueHaasDisplay-RomanItalic";
   src: url("fonts/NeueHaasDisplay-RomanItalic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family:"Clearface T.";
+  font-family: "Clearface T.";
   src: url("fonts/Clearface T..ttf") format("truetype");
 }
+
 @font-face {
-  font-family:"Clearface Heavy T.";
+  font-family: "Clearface Heavy T.";
   src: url("fonts/Clearface Heavy T..ttf") format("truetype");
 }
+
 @font-face {
-  font-family:"SourceSerifPro-Regular";
+  font-family: "SourceSerifPro-Regular";
   src: url("fonts/SourceSerifPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SourceSerifPro-Italic";
+  src: url("fonts/SourceSerifPro-Italic.ttf") format("truetype");
 }
 @import url("https://fonts.googleapis.com/css2?family=Amiri&family=DM+Serif+Text&display=swap");
 
@@ -42,6 +53,11 @@ main {
   display: grid;
   place-items: center;
   justify-items: center;
+}
+.abstract {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  text-align: left;
 }
 /* Alphabet reform */
 .bodyheader {
@@ -80,29 +96,35 @@ h3:hover .span {
   animation: shuffle steps(6) 4s infinite;
 }
 
-@keyframes shuffle
-{
-  0%
-  {
+@keyframes shuffle {
+  0% {
     transform: translateY(0px);
   }
-  100%
-  {
+
+  100% {
     transform: translateY(-600px);
   }
 }
+.biblio p {
+  font-size: 1rem;
+  max-width: 51em;
+  text-align: left;
+  border-left: 0;
+  border-right: 0;
+}
 
 /* Image */
-.img1 img{
+.img1 img {
   max-width: 910px;
   height: auto;
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
-.img2 img{
+
+.img2 img {
   max-width: 1567px;
   height: auto;
   margin-top: 40px;
@@ -111,6 +133,7 @@ h3:hover .span {
   margin-right: auto;
   width: 100%;
 }
+
 .imgside {
   position: absolute;
   display: flex;
@@ -118,7 +141,8 @@ h3:hover .span {
   width: 17%;
   /* background-color: lime */
 }
-.imgside img{
+
+.imgside img {
   max-width: 250px;
   height: auto;
   margin-left: 40px;
@@ -127,54 +151,117 @@ h3:hover .span {
   /* float: left; */
   /* position: absolute; */
 }
-.img3 img{
+
+.img3 img {
   max-width: auto;
   height: 483px;
   margin-top: 40px;
   float: left;
   padding: 10px;
 }
-.img4 img{
-  max-width: auto;
-  height: 1011px;
-  margin-top: 40px;
-  float: right;
-  padding: 10px;
-  margin-bottom: 30px;
+
+
+.topimg img{
+  max-width: 100%;
+  height: auto;
 }
-/* image description */
-.overlay-slide {
-  	position: relative;
-    box-sizing: border-box;
-    height: auto;
-    max-width: 910px;
-    overflow: hidden;
-    margin: 10px;
-    /* display: flex; */
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%
+.topimg {
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.overlay-slide:hover p{
+.topimg .img4 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.topimg:hover .img4 {
+  display: inline;
+}
+
+/* image description */
+.overlay-slide {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  max-width: 910px;
+  overflow: hidden;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+}
+
+.overlay-slide:hover p {
   transform: translate(0, 0);
-	transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  max-width: 910px;
+  width: 100%;
 }
-.overlay-slide p{
-  	position: absolute;
-    box-sizing: border-box;
-    bottom: 0;
-    transform: translate(0, 100%);
-    padding: 15px;
-    /* background-color: rgba(0,0,0,0.5); */
-    text-align:center;
-    transition: all 0.2s ease-in;
-    max-width: 910px;
-    text-indent: 0;
-    background-color: white;
-    margin-bottom: 0;
-}
+
 .overlay-slide p {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  transform: translate(0, 100%);
+  padding: 15px;
+  text-align: center;
+  transition: all 0.2s ease-in;
+  max-width: 910px;
+  text-indent: 0;
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.overlay-slide p {
+  font-family: "NeueHaasDisplay-Roman";
+  font-size: 14px;
+  color: black;
+  text-align: left;
+}
+
+/* image description2 */
+.overlay-slide2 {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  max-width: 1567px;
+  overflow: hidden;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+}
+
+.overlay-slide2:hover p {
+  transform: translate(0, 0);
+  transition: all 0.2s ease-in;
+  max-width: 1567px;
+  width: 100%;
+}
+
+.overlay-slide2 p {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  transform: translate(0, 100%);
+  padding: 15px;
+  text-align: center;
+  transition: all 0.2s ease-in;
+  max-width: 1567px;
+  text-indent: 0;
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.overlay-slide2 p {
   font-family: "NeueHaasDisplay-Roman";
   font-size: 14px;
   color: black;
