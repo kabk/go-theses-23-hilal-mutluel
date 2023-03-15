@@ -54,11 +54,7 @@ main {
   place-items: center;
   justify-items: center;
 }
-.abstract {
-  font-size: 1.5rem;
-  letter-spacing: 0;
-  text-align: left;
-}
+
 /* Alphabet reform */
 .bodyheader {
   margin: 0;
